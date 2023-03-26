@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>SignIn</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='https://kit.fontawesome.com/c4254e24a8.js' crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'images/style.css' %}">
+
+</head>
+<body>
+    <div class="contai">
+        <div class="form-box">
+            <h1 id="title">Sign IN</h1>
+            <form method="post">
+                {% csrf_token %}
+                <div class="input-group">
+                    <div class="input-field" id="namefield">
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="text" placeholder="Enter usrname" id="username" name="username">
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Password" id="password" name="pass">
+                    </div>
+                   
+                </div>
+                <div>
+                    <a href="/signup"><button type="button" class="button2 disable" id="signupbtn">Sign up</button></a>
+                    <a href="/signup"><button type="submit" class="button2" id="signinbtn">Sign in</button></a>
+                </div>
+                <div style="display:flex; justify-content:space-evenly;align-items: center;">
+                    <h2 style="color: white; font-size: 20px;">Go to Home page  </h2>
+                        <a href="/"><img src="{% static 'images/next.png' %}" class="next"></a>
+                   
+                </div>
+                
+            </form>
+        </div>
+    </div>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    
+</body>
+</html>
